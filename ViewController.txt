@@ -27,7 +27,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     
     @IBAction func DateSliderUp(sender: UISlider) {
 //3 Add Code to DateSliderUp determines how far back to get crime json and display on map
-        //**Add Copy**
+       //**Begin Copy**
         currentValue = Int(sender.value)
         let now = NSDate()
         mapView.removeAnnotations(mapView.annotations)
@@ -130,7 +130,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     
 //11 Add loadDataFromSODAApi
     
-    //**End Copy**
+   //**Begin Copy**
     func loadDataFromSODAApi(){
         let session:NSURLSession! = NSURLSession.sharedSession()
         let url:NSURL! = NSURL(string: "https://data.illinois.gov/resource/ctfx-e3rj.json?occurred_on_date=\(crimedate)")
