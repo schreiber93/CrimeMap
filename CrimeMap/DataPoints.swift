@@ -14,7 +14,7 @@ import Contacts
 // 2 ADD MKANNOTATION
 class DataPoints: NSObject,MKAnnotation{
     
-    // 3 Add Variables
+// 3 Add Variables
     //**Begin Copy**
     let title:String?
     let locationName:String!
@@ -30,7 +30,7 @@ class DataPoints: NSObject,MKAnnotation{
     }
     //**End Copy**
     
-    //4 Add fromDataArray func
+//4 Add fromDataArray func
     //**Begin Copy**
     class func fromDataArray(dataDictionary:NSDictionary!)->DataPoints?{
         // var error: NSError?
@@ -64,7 +64,7 @@ class DataPoints: NSObject,MKAnnotation{
     }
     //**Begin Copy**
     
-    //4 Add suctitle function
+//4 Add suctitle function
     //**Begin Copy**
     var subtitle:String?{
         return locationName

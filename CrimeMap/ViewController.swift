@@ -17,7 +17,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var lblCrimeRange: UILabel!
     @IBAction func DateSlider(sender: UISlider) {
-        //4 Days Ago on Label from Slider
+//2) Days Ago on Label from Slider
         //**Begin Copy**
         currentValue = Int(sender.value)
         lblCrimeRange.text = "\(currentValue) Days Ago Until Now."
@@ -26,7 +26,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
     
     @IBAction func DateSliderUp(sender: UISlider) {
-        //3 Add Code to DateSliderUp determines how far back to get crime json and display on map
+//3 Add Code to DateSliderUp determines how far back to get crime json and display on map
         //**Add Copy**
         currentValue = Int(sender.value)
         let now = NSDate()
@@ -47,7 +47,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
 
     }
     
-//5 Create Variables
+//4 Create Variables
     //**Begin Copy**
     private var locationManager = CLLocationManager()
     private var dataPoints:[DataPoints] = [DataPoints]()
@@ -57,7 +57,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     let initialRadius:CLLocationDistance = 20000
     //**End Copy**
 
-//6 Add func locationManager
+//5 Add func locationManager
     //**Begin Copy**
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
@@ -70,7 +70,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//7 When App loads get formatted date from slider
+//6 When App loads get formatted date from slider
         //**Begin Copy**
         
         //GET DATE
@@ -92,7 +92,8 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         
         //**End Copy**
     }
-    //8 Add mapview function. Needed to update location when user moves
+    
+//7 Add mapview function. Needed to update location when user moves
     //**Begin Copy**
     func mapView(mapView: MKMapView, didUpdateUserLocation
         userLocation: MKUserLocation) {
@@ -100,7 +101,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
     //**End Copy**
     
-    //9 Add checkLocationAuthorizationStatus Confirm user gives access to location
+//8 Add checkLocationAuthorizationStatus Confirm user gives access to location
     //**Begin Copy**
     func checkLocationAuthorizationStatus() {
         if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
@@ -111,7 +112,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
     //**End Copy**
     
-    //10 Add centerMapOnLocation func
+//9 Add centerMapOnLocation func
     //**Begin Copy**
     func centerMapOnLocation(location:CLLocation){
         let coordinateRegion:MKCoordinateRegion! = MKCoordinateRegionMakeWithDistance(location.coordinate, initialRadius * 2.0, initialRadius * 2.0)
@@ -119,7 +120,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
     //**End Copy**
     
-    //10 Add setUpNavigationBar Nav Bar Color
+//10 Add setUpNavigationBar Nav Bar Color
     //**Begin Copy**
     func setUpNavigationBar(){
         self.navigationBar.barTintColor = UIColor.redColor()
@@ -127,7 +128,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
     }
     //**End Copy**
     
-    //11 Add loadDataFromSODAApi
+//11 Add loadDataFromSODAApi
     
     //**End Copy**
     func loadDataFromSODAApi(){
