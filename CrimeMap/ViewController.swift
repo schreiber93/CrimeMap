@@ -11,6 +11,9 @@ import UIKit
 import MapKit
 import Foundation
 
+//1a) Add to right of UIViewController
+//    ,MKMapViewDelegate,CLLocationManagerDelegate
+
 class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
